@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SWAPI Demo</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="lib/swapi.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", init, false);
+			
+			function init() {
+				console.log("load");
+
+				swapiModule.getResources(function(data) {
+					console.log("Result of getResources", data);
+				});
+
+				//get all people
+				swapiModule.getPeople(function(data) {
+					console.log("Result of getPeople", data);
+				});
+				//get all people, page 2
+				swapiModule.getPeople(2, function(data) {
+					console.log("Result of getPeople (page 2)", data);
+				});
+
+				//get one person (assumes 1 works)
+				swapiModule.getPerson(1,function(data) {
+					console.log("Result of getPerson/1", data);
+				});
+
+				//get all films
+				swapiModule.getFilms(function(data) {
+					console.log("Result of getFilms", data);
+				});
+				//get all films, page 1
+				swapiModule.getFilms(1, function(data) {
+					console.log("Result of getFilms (page 1)", data);
+				});
+
+				//get one film (assumes 1 works)
+				swapiModule.getFilm(1,function(data) {
+					console.log("Result of getFilm/1", data);
+				});
+				
+				//get all starships
+				swapiModule.getStarships(function(data) {
+					console.log("Result of getStarships", data);
+				});
+				//get all starships, page 2
+				swapiModule.getStarships(2, function(data) {
+					console.log("Result of getStarships (page 2)", data);
+				});
+
+				//get one starship (assumes 2 works)
+				swapiModule.getStarship(2,function(data) {
+					console.log("Result of getStarship/2", data);
+				});
+
+				//get all vehicles
+				swapiModule.getVehicles(function(data) {
+					console.log("Result of getVehicles", data);
+				});
+				//get all vehicles, page 2
+				swapiModule.getVehicles(2, function(data) {
+					console.log("Result of getVehicles (page 2)", data);
+				});
+
+				//get one vehicle (assumes 4 works)
+				swapiModule.getVehicle(4,function(data) {
+					console.log("Result of getVehicle/4", data);
+				});
+
+				//get all species
+				swapiModule.getAllSpecies(function(data) {
+					console.log("Result of getAllSpecies", data);
+				});
+				//get all species, page 2
+				swapiModule.getAllSpecies(2, function(data) {
+					console.log("Result of getAllSpecies (page 2)", data);
+				});
+
+				//get one species (assumes 1 works)
+				swapiModule.getSpecies(1,function(data) {
+					console.log("Result of getSpecies/1", data);
+				});
+
+				//get all planets
+				swapiModule.getPlanets(function(data) {
+					console.log("Result of getPlanets", data);
+				});
+				//get all planets, page 2
+				swapiModule.getPlanets(2, function(data) {
+					console.log("Result of getPlanets (page 2)", data);
+				});
+
+				//get one planet (assumes 1 works)
+				swapiModule.getPlanet(1,function(data) {
+					console.log("Result of getPlanet/1", data);
+				});
+				
+			
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
