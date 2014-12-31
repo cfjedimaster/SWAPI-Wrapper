@@ -35,3 +35,7 @@ Every method above takes a callback argument. Examples:
 
 To be done: I know I can optimize the code a bit. I'll do that. I also want to add a caching layer. Finally, it needs some proper unit tests.
 
+History
+===
+
+Added unit tests and a grunt task. Also a minified version.
