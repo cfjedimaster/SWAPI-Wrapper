@@ -10,14 +10,17 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      all: ['lib/swapi.js']
+      all: ['lib/swapi.js'],
+      options: {
+        quotmark: 'single'
+      }
     },
     jasmine: {
       all: {
-        src:"lib/swapi.js",
+        src: 'lib/swapi.js',
         options: {
-          specs:"tests/spec/swapiSpec.js",
-          '--web-security':false
+          specs: 'tests/spec/swapiSpec.js',
+          '--web-security': false
         }
       }
     }
@@ -26,7 +29,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-  
-  grunt.registerTask('default', ['jasmine','jshint','uglify']);
+
+  grunt.registerTask('default', ['jasmine', 'jshint', 'uglify']);
 
 };
