@@ -38,4 +38,6 @@ To be done: I know I can optimize the code a bit. I'll do that. I also want to a
 History
 ===
 
-Added unit tests and a grunt task. Also a minified version.
+* Added unit tests and a grunt task. Also a minified version.
+* Replaced `XMLHttpRequest()` with `fetch()`
+* Updated the base URL to use `https`
