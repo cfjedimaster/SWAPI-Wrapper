@@ -41,3 +41,5 @@ History
 * Added unit tests and a grunt task. Also a minified version.
 * Replaced `XMLHttpRequest()` with `fetch()`
 * Updated the base URL to use `https`
+* Added promise support
+* Update Jasmine test

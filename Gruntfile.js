@@ -10,10 +10,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      all: ['lib/swapi.js'],
-      options: {
-        quotmark: 'single'
-      }
+      all: ['lib/swapi.js']
     },
     jasmine: {
       all: {
