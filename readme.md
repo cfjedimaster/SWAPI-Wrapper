@@ -5,17 +5,17 @@ A simple wrapper to the [Star Wars API](http://swapi.co/). Include the library a
 
 * getResources - Returns a list of all available resources. Not really useful for this library.
 * getPerson(id) - Returns one person.
-* getPeople([{page: _page number_], [search: _search string_]}) - Returns everyone, paged. Defaults to page 1.
+* getPeople([{[page: _page number_], [search: _search string_]}]) - Returns everyone, paged. Defaults to page 1.
 * getFilm(id) - Returns one film.
-* getFilms([{page: _page number_], [search: _search string_]) - Returns all films, paged. Defaults to page 1.
+* getFilms([{[page: _page number_], [search: _search string_]}]) - Returns all films, paged. Defaults to page 1.
 * getPlanet(id) - Returns a planet.
-* getPlanets([{page: _page number_], [search: _search string_]) - Returns all planets, paged. Defaults to page 1.
+* getPlanets([{[page: _page number_], [search: _search string_]}]) - Returns all planets, paged. Defaults to page 1.
 * getSpecies(id) - Returns one species.
-* getAllSpecies([{page: _page number_], [search: _search string_]) - Returns all species, paged. Defaults to page 1.
+* getAllSpecies([{[page: _page number_], [search: _search string_]}]) - Returns all species, paged. Defaults to page 1.
 * getStarship(id) - Returns a starship.
-* getStarships([{page: _page number_], [search: _search string_]) - Returns all starships, paged. Defaults to page 1.
+* getStarships([{[page: _page number_], [search: _search string_]}]) - Returns all starships, paged. Defaults to page 1.
 * getVehicle(id) - Returns a vehicle.
-* getVehicles([{page: _page number_], [search: _search string_]) - Returns all vehicles, paged. Defaults to page 1.
+* getVehicles([{[page: _page number_], [search: _search string_]}]) - Returns all vehicles, paged. Defaults to page 1.
 
 Every method that returns multiple results, e.g., getPeople(), take an optional object as their first argument with two possible properties:
 
