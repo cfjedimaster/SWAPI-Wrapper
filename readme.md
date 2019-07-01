@@ -17,7 +17,7 @@ A simple wrapper to the [Star Wars API](http://swapi.co/). Include the library a
 * getVehicle(id) - Returns a vehicle.
 * getVehicles([{[page: _page number_], [search: _search string_]}]) - Returns all vehicles, paged. Defaults to page 1.
 
-Every method that returns multiple results, e.g., getPeople(), take an optional object as their first argument with two possible properties:
+Every method that returns multiple results, e.g., getPeople(), take an optional object as their first argument with two optional properties:
 
 * page: an integer,
 * search: a search string
