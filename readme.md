@@ -9,7 +9,7 @@ A simple wrapper to the [Star Wars API](http://swapi.co/). Include the library a
 * getFilm(id) - Returns one film.
 * getFilms([{page: _page number_], [search: _search string_]) - Returns all films, paged. Defaults to page 1.
 * getPlanet(id) - Returns a planet.
-* getPlanets([{page: _page number_], [search: _search string_]) - Returns all plaents, paged. Defaults to page 1.
+* getPlanets([{page: _page number_], [search: _search string_]) - Returns all planets, paged. Defaults to page 1.
 * getSpecies(id) - Returns one species.
 * getAllSpecies([{page: _page number_], [search: _search string_]) - Returns all species, paged. Defaults to page 1.
 * getStarship(id) - Returns a starship.
