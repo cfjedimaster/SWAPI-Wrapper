@@ -74,7 +74,12 @@ describe("SWAPI", function() {
     });
   });
 
-  var peopleKeys = ["count", "next", "previous", "results"];
+  var peopleKeys = [
+    "count",
+    "next",
+    "previous",
+    "results"
+  ];
 
   it("should be able to get People via callback", function(done) {
     swapiModule.getPeople(function(people) {
@@ -87,12 +92,12 @@ describe("SWAPI", function() {
   });
 
   it("should be able to get the second page of People via callback", function(done) {
-    swapiModule.getPeople(2, function(people) {
-      for (var i = 0, len = keys.length; i < len; i++) {
+    swapiModule.getPeople({page: 2}, function(people) {
+      for (var i = 0, len = peopleKeys.length; i < len; i++) {
         expect(people[peopleKeys[i]]).toBeDefined();
       }
 
-      expect(people.previous).toMatch("page=1");
+      expect(people.previous).toContain("page=1");
 
       done();
     });
@@ -100,8 +105,8 @@ describe("SWAPI", function() {
 
   it("should be able to get People via promise", function(done) {
     swapiModule.getPeople().then(function(people) {
-      for (var key of people) {
-        expect(people[peopleKeys[i]]).toBeDefined();
+      for (var key of peopleKeys) {
+        expect(people[key]).toBeDefined();
       }
 
       done();
@@ -109,12 +114,34 @@ describe("SWAPI", function() {
   });
 
   it("should be able to get the second page of People via promise", function(done) {
-    swapiModule.getPeople(2).then(function(people) {
-      for (var key of people) {
-        expect(people[peopleKeys[i]]).toBeDefined();
+    swapiModule.getPeople({page: 2}).then(function(people) {
+      for (var key of peopleKeys) {
+        expect(people[key]).toBeDefined();
       }
 
-      expect(people.previous).toMatch("page=1");
+      expect(people.previous).toContain("page=1");
+
+      done();
+    });
+  });
+
+  it("should be able to search for People via callback", function(done) {
+    swapiModule.getPeople({search: "Skywalker"}, function(people) {
+      for (var key of peopleKeys) {
+        expect(people[key]).toBeDefined();
+      }
+      expect(people.results.length === 3);
+
+      done();
+    });
+  });
+
+  it("should be able to search for People via promise", function(done) {
+    swapiModule.getPeople({search: "Skywalker"}).then(function(people) {
+      for (var key of peopleKeys) {
+        expect(people[key]).toBeDefined();
+      }
+      expect(people.results.length === 3);
 
       done();
     });
