@@ -46,8 +46,6 @@ Every method above takes a callback argument as their final argument. Examples:
 
 To be done: I know I can optimize the code a bit. I'll do that. I also want to add a caching layer. Finally, it needs some proper unit tests.
 
-*** Unit tests not updated for re-structured code ***
-
 History
 ===
 
@@ -56,3 +54,6 @@ History
 * Updated the base URL to use `https`
 * Added promise support
 * Update Jasmine test
+
+* Added support for search
+* Updated unit tests
