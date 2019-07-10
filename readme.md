@@ -22,7 +22,7 @@ Every method that returns multiple results, e.g., getPeople(), take an optional 
 * page: an integer,
 * search: a search string
 
-Every method above takes a callback argument as their final argument. Examples:
+Every method above can take a callback argument as their final argument. Examples:
 
 	// get all vehicles
 	swapiModule.getVehicles(function(data) {
