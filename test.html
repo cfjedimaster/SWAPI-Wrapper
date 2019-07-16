@@ -51,7 +51,7 @@
 					log("Result of getPeople", data);
 				});
 				//get all people, page 2
-				swapiModule.getPeople(2, function(data) {
+				swapiModule.getPeople({page: 2}, function(data) {
 					log("Result of getPeople (page 2)", data);
 				});
 
@@ -65,7 +65,7 @@
 					log("Result of getFilms", data);
 				});
 				//get all films, page 1
-				swapiModule.getFilms(1, function(data) {
+				swapiModule.getFilms({page: 1}, function(data) {
 					log("Result of getFilms (page 1)", data);
 				});
 
@@ -79,7 +79,7 @@
 					log("Result of getStarships", data);
 				});
 				//get all starships, page 2
-				swapiModule.getStarships(2, function(data) {
+				swapiModule.getStarships({page: 2}, function(data) {
 					log("Result of getStarships (page 2)", data);
 				});
 
@@ -93,7 +93,7 @@
 					log("Result of getVehicles", data);
 				});
 				//get all vehicles, page 2
-				swapiModule.getVehicles(2, function(data) {
+				swapiModule.getVehicles({page: 2}, function(data) {
 					log("Result of getVehicles (page 2)", data);
 				});
 
@@ -107,7 +107,7 @@
 					log("Result of getAllSpecies", data);
 				});
 				//get all species, page 2
-				swapiModule.getAllSpecies(2, function(data) {
+				swapiModule.getAllSpecies({page: 2}, function(data) {
 					log("Result of getAllSpecies (page 2)", data);
 				});
 
@@ -121,7 +121,7 @@
 					log("Result of getPlanets", data);
 				});
 				//get all planets, page 2
-				swapiModule.getPlanets(2, function(data) {
+				swapiModule.getPlanets({page: 2}, function(data) {
 					log("Result of getPlanets (page 2)", data);
 				});
 
